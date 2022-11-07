@@ -1,0 +1,42 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calc__main{
+    border: solid black 20px;
+
+   
+}
+.calc__answer{
+    text-align: end;
+    font-size: 2em;
+    padding: 20px 40px;
+}
+.calc__btns{
+    height: 600px;
+    width: 600px;
+    display: grid;
+    grid-template-columns: 
+    repeat(4, minmax(15px,1fr));
+    font-size: 2.5em;
+}
+.calc__btns input{
+    font-size: .8em;
+}
+
+.calc__clear{
+    grid-column: 1/4;
+}
+.calc__result{
+    grid-column: 3/5;
+}
+
