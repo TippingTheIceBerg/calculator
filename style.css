@@ -16,7 +16,7 @@ html,body{
 
    
 }
-.calc__answer{
+.calc__input{
     text-align: end;
     font-size: 2em;
     padding: 20px 40px;
