@@ -10,8 +10,8 @@
 
 let userInput = document.querySelector(".calc__input");
 let answerStorage = document.querySelector(".answer__store");
-let result = document.querySelector(".calc__result")
-
+let result = document.querySelector(".calc__result");
+let userEval;
 
 let numbers = document.querySelectorAll(".calc__number");
 let num1;
@@ -59,13 +59,37 @@ art.forEach(e => {
       num1 = userInput.textContent;
       answerStorage.textContent = userInput.textContent + e.value;
       userInput.textContent = 0;
+      userEval = e.value;
    })
 })
 
+
+
 // calculates value
+let myAnswer;
 result.addEventListener("click",()=>{
-   console.log(num1,num2)
+if(userEval = "*"){
+   setMultiply(num1,num2)
+  
+}
+userInput.textContent = myAnswer;
+num1 = myAnswer;
+answerStorage.textContent = ""
 })
+
+function setAdd(num1,num2){
+  myAnswer = num1+num2;
+};
+function setSub(num1,num2){
+   myAnswer = num1-num2;
+};
+function setDivide(num1,num2){
+   myAnswer = num1/num2;
+};
+function setMultiply(num1,num2){
+   myAnswer = num1*num2
+
+};
 
 
 // clear values
